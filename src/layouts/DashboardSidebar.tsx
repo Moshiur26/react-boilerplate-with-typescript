@@ -54,8 +54,8 @@ import {
   BiDonateBlood,
   BiRegistered,
 } from "react-icons/bi";
-import genocide_logo from "@/assets/logo/genocide_logo.png";
-import genocide_logo_sm from "@/assets/logo/genocide_logo_sm.png";
+import genocide_logo from "@/assets/logo/contact-boock-logo.jpg";
+import genocide_logo_sm from "@/assets/logo/contact-boock-logo_sm.jpg";
 import { AiOutlineNotification, AiOutlineVideoCamera, AiOutlineAudit, AiOutlineShoppingCart } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 
