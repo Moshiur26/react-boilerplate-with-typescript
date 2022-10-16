@@ -1,0 +1,74 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+.imageUploadWrapper{
+    .imgUploadHeader{
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 10px;
+        .imgFormatError{
+            color: red;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    input[type="file"]{
+        display: none;
+    }
+    .retrunImageUploadMain{
+        display: flex;
+        .returnImageUpload{
+            
+            .imageUploadLabelHolder{
+                width: 100px;
+                height: 100px;
+        
+                .imageUploadLabel{
+                    height: 100px;
+                    width: 100px;
+                    background-color:$borderColor;
+                    display: grid;
+                    place-items: center;
+                    cursor: pointer;
+                    &:hover{
+                        background-color:#e7edff ;
+                    }
+                }
+            }
+        }
+        .imageUploadPreview{
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: left; 
+                
+        }
+    }
+
+}
+
+.returnImageWrapper{
+    margin-right: 10px;
+    position: relative;
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .cancelUploadedImage{
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        cursor: pointer;
+        opacity: 0.5;
+        &:hover{
+            opacity:1;
+        }
+    }
+}

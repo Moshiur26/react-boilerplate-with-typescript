@@ -1,0 +1,114 @@
+//********** Ant Design ****************
+//ant design table
+.ant-table-thead > tr > th {
+  border: 0.5px solid rgb(4,120,87) !important;
+  color: rgb(231, 230, 230) !important;
+  background: rgb(6 78 59)!important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+.ant-table-tbody > tr > td {
+  border: 1px solid rgb(239, 239, 241) !important;
+}
+.ant-table-tbody > tr:nth-child(even) > td {
+  background: rgb(251 250 251) !important;
+}
+
+//ant design modal
+.ant-modal-title {
+  color: rgb(3 105 161) !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
+//ant design sidebar menu
+.ant-menu-item-selected {
+  background-color: rgb(233, 13, 72) !important;
+}
+
+//ant design pagination
+.ant-pagination-item {
+  border-radius: 5px !important;
+  &:hover {
+    border: 1px solid rgb(4 120 87) !important;
+  }
+  a {
+    &:hover {
+      color: rgb(4 120 87)!important;
+    }
+  }
+}
+.ant-pagination-item-active {
+  border: 1px solid rgb(4 120 87)!important;
+  a {
+    color: rgb(4 120 87) !important;
+    font-weight: bold;
+  }
+}
+
+.ant-pagination-item-link {
+  border-radius: 5px !important;
+  &:hover {
+    color: rgb(4 120 87) !important;
+    border: 1px solid rgb(4 120 87) !important;
+  }
+}
+.ant-pagination-disabled:hover .ant-pagination-item-link {
+  color: rgba(0, 0, 0, 0.25) !important;
+  border-color: #d9d9d9 !important;
+  cursor: not-allowed;
+}
+.anticon-right, .anticon-left {
+  position: relative;
+  top: -3px;
+}
+
+.ant-pagination-options {
+  display: none;
+}
+
+.ant-input-lg{
+  font-size: 0.9rem !important;
+}
+.anticon-close-circle{
+  position: relative;
+  top: -2px;
+  right: 4px;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 3px !important;
+}
+
+.ant-upload.ant-upload-select {
+  display: block;
+}
+
+.ant-upload .ant-btn:focus {
+  color: rgb(4 120 87) !important;
+  border-color: rgb(4 120 87) !important;
+  &:hover {
+    color: rgb(255 255 255) !important;
+  }
+}
+
+//************* Others ********************
+.bg-login {
+  background-image: url(../assets/images/genocide-background-dark.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+// ant picker ok
+.ant-picker-ok {
+  .ant-btn-primary{
+    color: black;
+  }
+}
+ul, ol, dl {
+  list-style: unset;
+  padding-left: 40px;
+}

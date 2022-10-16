@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .page-title {
+    @apply text-xl text-emerald-700 uppercase font-medium whitespace-nowrap;
+  }
+  .dashborad-sidebar {
+    @apply fixed left-0 top-0 bottom-0 h-screen overflow-auto z-20;
+  }
+  .sidebarMin {
+    @apply py-1.5;
+  }
+  .sidebarMax {
+    @apply py-4;
+  }
+
+  .columnSortCaret {
+    @apply inline-block relative left-3 text-xs text-gray-300;
+  }
+
+  .dropzone-box {
+    @apply h-full border-dashed border-2 border-sky-500 rounded-md cursor-pointer focus:outline-none;
+  }
+
+  .detail-key {
+    @apply py-3 px-6 text-sm font-semibold  text-gray-900 whitespace-nowrap  pl-6 w-32;
+  }
+  .detail-header {
+    @apply bg-emerald-900 text-white py-2 pl-6  text-lg;
+  }
+  .detail-data {
+    @apply py-3 px-6 text-sm text-gray-900 break-words;
+  }
+  .dashboard-card {
+    @apply bg-white shadow w-1/2 rounded py-6;
+  }
+  .dashboard-card-btn {
+    @apply rounded-full  p-2;
+  }
+}
+
+// btn and input
+@layer components {
+  // for button styles
+  .btn {
+    @apply font-medium rounded text-sm px-3.5 py-2 text-center mr-2 mb-2 uppercase overflow-hidden;
+  }
+
+  .btn-block {
+    @apply w-full;
+  }
+
+  // normal button
+  .btn-primary {
+    @apply bg-emerald-800 hover:bg-emerald-700 border border-emerald-600 hover:border-emerald-500 rounded-lg uppercase;
+  }
+  // .btn-danger {
+  //   @apply text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300  disabled:bg-red-800
+  //           disabled:text-gray-300 disabled:border-red-200 disabled:shadow-none;
+  // }
+
+  //for outline button
+  .btn-outline-primary {
+    @apply text-emerald-700 hover:text-white border border-emerald-700 hover:bg-emerald-800 
+            focus:ring-4 focus:ring-emerald-300;
+  }
+
+  .btn-outline-light {
+    @apply text-gray-600 hover:text-white border border-gray-600 hover:bg-gray-600 
+            focus:ring-4 focus:ring-gray-300;
+  }
+
+  .btn-outline-secondary {
+    @apply text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 
+            focus:ring-purple-300;
+  }
+
+  .btn-outline-warning {
+    @apply text-yellow-700 hover:text-white border border-yellow-700 hover:bg-yellow-800 
+            focus:ring-4 focus:ring-yellow-300;
+  }
+
+  .btn-outline-danger {
+    @apply text-red-600 hover:text-white border border-red-600 hover:bg-red-700 focus:ring-4 
+            focus:ring-red-300 text-xs;
+  }
+
+  .file-upload-btn {
+    @apply rounded text-emerald-700 hover:bg-emerald-600 border-emerald-500 
+    hover:border-emerald-500 active:bg-emerald-700 hover:text-gray-100 uppercase;
+  }
+}
