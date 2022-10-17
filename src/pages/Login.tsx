@@ -9,15 +9,12 @@ import { postData } from "@/lib/services/baseServices";
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 interface IFormInputs {
-  email: string;
+  username: string;
   password: string;
 }
 
 const validationSchema = yup.object({
-  email: yup
-    .string()
-    .email("Invalid email address")
-    .required("Email address is required"),
+  username: yup.string().required("Username address is required"),
   password: yup.string().required("Password is required").trim(),
 });
 
@@ -37,7 +34,7 @@ const Login = () => {
     if (res?.success) {
       Cookies.set("token", res?.data?.token, { expires: 1 }),
         Cookies.set("role", res?.data?.role, { expires: 1 }),
-        Cookies.set("email", res?.data?.email, { expires: 1 }),
+        Cookies.set("username", res?.data?.username, { expires: 1 }),
         Cookies.set("name", res?.data?.name, { expires: 1 }),
         Cookies.set("expiry", res?.data?.expiry);
       navigate("/", { replace: true });
@@ -79,9 +76,9 @@ const Login = () => {
                   <div className="mb-5">
                     <InputControl
                       control={control}
-                      name="email"
-                      type="email"
-                      placeholder="e.g. admin@misfit.tech"
+                      name="username"
+                      type="username"
+                      placeholder="e.g. admin"
                       errors={errors}
                     />
                   </div>
