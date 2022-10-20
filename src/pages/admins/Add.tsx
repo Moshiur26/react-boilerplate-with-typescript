@@ -8,13 +8,14 @@ import { Row, Col } from "antd";
 const createAdminSchema = yup
   .object({
     name: yup.string().required("Name is required").trim(),
+    username: yup
+      .string()
+      .required("Username address is required"),
     email: yup
       .string()
-      .email("Invalid email address")
-      .required("Email address is required"),
+      .email("Invalid email address"),
     phone: yup
       .string()
-      .required("Phone number is required")
       .matches(
         /(^([+]{1}[8]{2}|0088)?(01){1}[3-9]{1}\d{8})$/,
         "Provide valid BD phone number"

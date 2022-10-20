@@ -9,25 +9,34 @@ import * as yup from "yup";
 import { Row, Col } from "antd";
 
 const updateAdminSchema = yup
-  .object({
-    name: yup.string().required("Name is required").trim(),
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("Email address is required"),
-    phone: yup
-      .string()
-      .required("Phone number is required")
-      .matches(
-        /(^([+]{1}[8]{2}|0088)?(01){1}[3-9]{1}\d{8})$/,
-        "Provide valid BD phone number"
-      ),
-    role: yup
-      .string()
-      .typeError("Role is required")
-      .required("Role is required"),
-  })
-  .required();
+.object({
+  name: yup.string().required("Name is required").trim(),
+  username: yup
+    .string()
+    .required("Username address is required"),
+  email: yup
+    .string()
+    .email("Invalid email address"),
+  phone: yup
+    .string()
+    .matches(
+      /(^([+]{1}[8]{2}|0088)?(01){1}[3-9]{1}\d{8})$/,
+      "Provide valid BD phone number"
+    ),
+  password: yup
+    .string()
+    .required("Password is required")
+    .matches(
+      /(?=.*\d)([a-zA-Z0-9]).{5,}/,
+      "Minimum six characters with one number required"
+    ),
+  confirmPassword: yup
+    .string()
+    .required("Password confirmation is required")
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+  role: yup.string().typeError('Role is required').required("Role is required"),
+})
+.required();
 
 const Edit = () => {
   const [adminDetails, setAdminDetails] = useState<any>({});

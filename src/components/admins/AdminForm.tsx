@@ -22,6 +22,7 @@ interface AdminFormProps {
 
 interface IFormInputs {
   name: string;
+  username: string;
   email: string;
   phone: string;
   password?: string;
@@ -30,10 +31,10 @@ interface IFormInputs {
 }
 
 const roleOptions = [
-  { id: 1, value: 'member', label: "Member" },
+  // { id: 1, value: 'member', label: "Member" },
   { id: 2, value: 'admin', label: "Admin" },
   // { id: 3, value: 'super_admin', label: "Super Admin" },
-  { id: 4, value: 'manager', label: "Manager" },
+  // { id: 4, value: 'manager', label: "Manager" },
 ];
 
 const AdminForm: FC<AdminFormProps> = ({
@@ -57,6 +58,7 @@ const AdminForm: FC<AdminFormProps> = ({
     if (formMode === "UPDATE") {
       reset({
         name: adminData?.name,
+        username: adminData?.username,
         email: adminData?.email,
         phone: adminData?.phone,
         role: adminData?.role
@@ -67,6 +69,7 @@ const AdminForm: FC<AdminFormProps> = ({
   const onSubmit = async (data: IFormInputs) => {
     const formData = {
       name: data.name,
+      username: data.username,
       email: data.email,
       phone: data.phone,
       password: data.password,
